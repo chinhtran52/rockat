@@ -27,7 +27,7 @@ const ToolBox = ({ className }: ToolBoxProps): ReactElement => {
 	const hiddenActionRenderers = useRef<{ [key: string]: OptionRenderer }>({});
 
 	const { actions: mapActions } = useToolboxContext();
-
+	// CUSTOM: Customize toolbox here
 	const actions = (Array.from(mapActions.values()) as ToolboxActionConfig[]).sort((a, b) => (a.order || 0) - (b.order || 0));
 	const visibleActions = isMobile ? [] : actions.slice(0, 6);
 

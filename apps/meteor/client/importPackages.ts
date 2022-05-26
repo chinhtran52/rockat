@@ -6,6 +6,7 @@ import '../app/authorization';
 import '../app/autotranslate/client';
 import '../app/cas/client';
 import '../app/channel-settings';
+import '../app/chatbot-showcase';
 import '../app/crowd/client';
 import '../app/custom-oauth';
 import '../app/custom-sounds/client';
