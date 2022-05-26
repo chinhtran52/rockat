@@ -36,7 +36,7 @@ const PageHeader: FC<PageHeaderProps> = ({ children = undefined, title, onClickB
 					</TemplateHeader.ToolBox>
 				)}
 				{onClickBack && <ActionButton ghost small mie='x8' icon='arrow-back' onClick={onClickBack} title={t('Back')} />}
-				<Box is='h2' fontScale='h2' flexGrow={1}>
+				<Box data-qa='page-title' data-qa-id={`page-title-${title}`} is='h2' fontScale='h2' flexGrow={1}>
 					{title}
 				</Box>
 				{children}

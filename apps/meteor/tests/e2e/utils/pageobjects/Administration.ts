@@ -706,4 +706,13 @@ export default class Administration extends BasePage {
 	public userInfoActions(): Locator {
 		return this.getPage().locator('[data-qa-id="UserInfoActions"]');
 	}
+
+	// settings groups
+	public getSettingsGroupBoxes(): Locator {
+		return this.getPage().locator('[data-qa="setting-group-card"] button');
+	}
+
+	public getPageTitle(): Locator {
+		return this.getPage().locator('[data-qa="page-title"]');
+	}
 }

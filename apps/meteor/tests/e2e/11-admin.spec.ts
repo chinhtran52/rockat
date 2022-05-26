@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 import { test, expect } from '@playwright/test';
 
 import LoginPage from './utils/pageobjects/LoginPage';
@@ -484,6 +485,23 @@ test.describe('[Administration]', () => {
 				test('the notification sound volume field value should be 100', async () => {
 					await expect(admin.accountsNotificationsSoundVolume()).toHaveValue('100');
 				});
+			});
+		});
+
+		test.describe('[Settings Groups]', () => {
+			test.beforeAll(async () => {
+				await admin.groupSettingsPageBack().click();
+			});
+
+			test('expect render each setting group page', async () => {
+				const blocks = admin.getSettingsGroupBoxes();
+				const count = await blocks.count();
+
+				for (let i = 0; i < count; i++) {
+					await blocks.nth(i).click();
+					await expect(admin.getPageTitle()).toBeVisible();
+					await admin.groupSettingsPageBack().click();
+				}
 			});
 		});
 	});
