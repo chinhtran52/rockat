@@ -4815,7 +4815,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^2.34.0
     "@typescript-eslint/parser": ^3.0.0
     adm-zip: 0.5.9
-    agenda: "https://github.com/RocketChat/agenda#c2cfcc532b8409561104dca980e6adbbcbdf5442"
+    agenda: 3.1.0
     ajv: ^8.11.0
     apn: 2.2.0
     archiver: ^3.1.1
@@ -8596,9 +8596,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agenda@https://github.com/RocketChat/agenda#c2cfcc532b8409561104dca980e6adbbcbdf5442":
-  version: 3.1.2
-  resolution: "agenda@https://github.com/RocketChat/agenda.git#commit=c2cfcc532b8409561104dca980e6adbbcbdf5442"
+"agenda@npm:3.1.0":
+  version: 3.1.0
+  resolution: "agenda@npm:3.1.0"
   dependencies:
     cron: ~1.8.0
     date.js: ~0.3.3
@@ -8606,7 +8606,7 @@ __metadata:
     human-interval: ~1.0.0
     moment-timezone: ~0.5.27
     mongodb: ~3.5.0
-  checksum: f5f68008298f9482631f1f494e392cd6b8ba7971a3b0ece81ae2abe60f53d67973ff4476156fa5c9c41b8b58c4ccd284e95c545e0523996dfd05f9a80b843e07
+  checksum: 118e814d6ba27f860dd770a54ff47504dfbd85605d376068e3ddeb2bed52f3de8691344ca4f7088a4c9826eadb4958b1b1242c2165457c0700dda9fe0e1d047b
   languageName: node
   linkType: hard
 
