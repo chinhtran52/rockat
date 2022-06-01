@@ -1,15 +1,20 @@
 import { Box } from '@rocket.chat/fuselage';
-import { useTranslation } from '@rocket.chat/ui-contexts';
-import React from 'react';
+import { useTranslation, useUserRoom } from '@rocket.chat/ui-contexts';
+import React, { useMemo } from 'react';
 
 import VerticalBar from '../../../../components/VerticalBar';
 import { useTabBarClose } from '../../providers/ToolboxProvider';
 import { Showcase } from './components';
+import getRoomTokenInfo from './services';
 
-const ChatbotShowcase = () => {
+const ChatbotShowcase = ({ rid }) => {
 	const onClickClose = useTabBarClose();
 	const t = useTranslation();
-
+	const room = useUserRoom(rid);
+	const roomInfo = useMemo(() => {
+		const token = room?.v?.token;
+		return getRoomTokenInfo(token);
+	}, [room]);
 	return (
 		<>
 			<VerticalBar.Header>
@@ -20,7 +25,7 @@ const ChatbotShowcase = () => {
 				<VerticalBar.Close onClick={onClickClose} />
 			</VerticalBar.Header>
 			<VerticalBar.Content paddingInline={0}>
-				<Showcase />
+				<Showcase {...roomInfo} />
 			</VerticalBar.Content>
 		</>
 	);
